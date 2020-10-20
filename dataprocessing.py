@@ -22,7 +22,7 @@ with open('./data/output.json') as csv_file:
             for response in responses:
                 data['text_a'].append(question)
                 data['text_b'].append(response[0])
-                data['labels'].append(10 * int(response[1]) / mx)
+                data['labels'].append(int(5 * int(response[1]) / mx))
 
 
 df = pd.DataFrame(data=data)
